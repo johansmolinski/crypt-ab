@@ -18,7 +18,6 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
           className="h-16 md:h-20 w-auto"
           style={{
             filter: "invert(55%) sepia(95%) saturate(5000%) hue-rotate(100deg) brightness(110%)",
-            drop­Shadow: "0 0 10px hsl(120 100% 50% / 0.5)",
           }}
         />
       </div>
