@@ -18,7 +18,8 @@ const MobileNav = ({ activeSection, onNavigate }: MobileNavProps) => {
         <img
           src={cryptIcon}
           alt="Crypt AB"
-          className="h-8 w-auto"
+          className="h-8 w-auto cursor-pointer"
+          onClick={() => onNavigate("home")}
           style={{
             filter: "invert(75%) sepia(95%) saturate(3000%) hue-rotate(80deg) brightness(105%)",
           }}

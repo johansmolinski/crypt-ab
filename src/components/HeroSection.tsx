@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import cryptLogo from "@/assets/crypt.svg";
 import { useStatus } from "@/context/StatusContext";
@@ -10,6 +11,15 @@ interface HeroSectionProps {
 const HeroSection = ({ onContactClick }: HeroSectionProps) => {
   const { setStatusText, resetStatus } = useStatus();
   const { t } = useLanguage();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const main = document.querySelector("main");
+    if (!main) return;
+    const onScroll = () => setScrolled(main.scrollTop > 60);
+    main.addEventListener("scroll", onScroll, { passive: true });
+    return () => main.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <section id="home" className="min-h-[80vh] flex flex-col justify-center border-b border-border px-6 lg:px-12 py-20">
@@ -17,8 +27,9 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
         <img
           src={cryptLogo}
           alt="Crypt AB"
-          className="h-20 md:h-28 w-auto"
+          className="w-auto transition-all duration-500 ease-out"
           style={{
+            height: scrolled ? "5rem" : "10rem",
             filter: "invert(75%) sepia(95%) saturate(3000%) hue-rotate(80deg) brightness(105%)",
           }}
         />
