@@ -9,14 +9,13 @@ const ContactSection = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Static site — no actual submission
     setStatusText("STATUS: MESSAGE_QUEUED // STANDBY");
     setTimeout(resetStatus, 3000);
   };
 
   return (
     <section id="contact" className="px-6 lg:px-12 py-16">
-      <p className="text-label mb-8">CONTACT</p>
+      <p className="text-label mb-8">&gt; CONTACT_</p>
       <p className="text-muted-foreground text-sm mb-10 max-w-[58ch]">
         Discuss consulting opportunities, software projects, or collaborations.
       </p>
@@ -24,23 +23,23 @@ const ContactSection = () => {
         <div>
           <input
             type="email"
-            placeholder="EMAIL ADDRESS"
+            placeholder="EMAIL_ADDRESS>"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full bg-transparent border-b border-border pb-3 text-foreground font-mono text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+            className="w-full bg-transparent border-b border-border pb-3 text-foreground font-mono text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors crt-glow"
             onFocus={() => setStatusText("INPUT: EMAIL_ADDRESS")}
             onBlur={resetStatus}
           />
         </div>
         <div>
           <textarea
-            placeholder="SYSTEM REQUIREMENTS / MESSAGE"
+            placeholder="SYSTEM_REQUIREMENTS>"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
             rows={4}
-            className="w-full bg-transparent border-b border-border pb-3 text-foreground font-mono text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+            className="w-full bg-transparent border-b border-border pb-3 text-foreground font-mono text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none crt-glow"
             onFocus={() => setStatusText("INPUT: SYSTEM_REQUIREMENTS")}
             onBlur={resetStatus}
           />

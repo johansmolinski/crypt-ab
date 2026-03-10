@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["'Inter Tight'", "sans-serif"],
-        mono: ["'JetBrains Mono'", "monospace"],
+        heading: ["'VT323'", "monospace"],
+        mono: ["'Share Tech Mono'", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",

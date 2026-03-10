@@ -35,16 +35,16 @@ const ServicesSection = () => {
   return (
     <section id="services" className="border-b border-border">
       <div className="px-6 lg:px-12 py-12">
-        <p className="text-label mb-8">SERVICES</p>
+        <p className="text-label mb-8">&gt; SERVICES_</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2">
         {services.map((service) => (
           <div
             key={service.number}
-            className="border-t border-border md:odd:border-r px-6 lg:px-12 py-8"
+            className="border-t border-border md:odd:border-r px-6 lg:px-12 py-8 hover:bg-secondary/30 transition-colors"
           >
-            <span className="text-label block mb-3">{service.number}</span>
-            <h3 className="font-heading text-lg font-700 text-foreground mb-2">
+            <span className="text-label block mb-3">[{service.number}]</span>
+            <h3 className="font-heading text-xl text-foreground mb-2 crt-glow">
               {service.title}
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
