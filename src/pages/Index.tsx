@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 import StatusBar from "@/components/StatusBar";
 import { StatusProvider } from "@/context/StatusContext";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -32,6 +33,7 @@ const Index = () => {
             <ServicesSection />
             <AboutSection />
             <ContactSection />
+            <Footer />
           </main>
 
           <StatusBar />
