@@ -28,7 +28,7 @@ const Index = () => {
           <SidebarNav activeSection={activeSection} onNavigate={handleNavigate} />
           <MobileNav activeSection={activeSection} onNavigate={handleNavigate} />
 
-          <main className="lg:ml-[30vw] pt-[88px] lg:pt-0">
+          <main className="lg:ml-[30vw] pt-[88px] lg:pt-0 lg:h-screen lg:overflow-y-auto">
             <HeroSection onContactClick={() => handleNavigate("contact")} />
             <ServicesSection />
             <AboutSection />
