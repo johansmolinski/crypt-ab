@@ -15,13 +15,20 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
 
   useEffect(() => {
     const main = document.querySelector("main");
-    if (!main) return;
+    const isDesktop = () => window.innerWidth >= 1024;
+
     const onScroll = () => {
-      const progress = Math.min(main.scrollTop / 300, 1);
+      const scrollTop = isDesktop() && main ? main.scrollTop : window.scrollY;
+      const progress = Math.min(scrollTop / 300, 1);
       setScrollProgress(progress);
     };
-    main.addEventListener("scroll", onScroll, { passive: true });
-    return () => main.removeEventListener("scroll", onScroll);
+
+    if (main) main.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      if (main) main.removeEventListener("scroll", onScroll);
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   const logoHeight = `clamp(5rem, ${100 - scrollProgress * 70}vh, 100vh)`;
