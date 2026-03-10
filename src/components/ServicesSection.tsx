@@ -1,44 +1,15 @@
-const services = [
-  {
-    number: "01",
-    title: "Backend Development",
-    description: "Scalable, high-performance core systems built for longevity and maintainability.",
-  },
-  {
-    number: "02",
-    title: "Cloud Architecture",
-    description: "Resilient infrastructure design, deployment, and operational strategy.",
-  },
-  {
-    number: "03",
-    title: "API & Integrations",
-    description: "Secure, seamless data flow between platforms, services, and third-party systems.",
-  },
-  {
-    number: "04",
-    title: "IoT / Connected Services",
-    description: "Cloud-side platform engineering for physical devices and sensor networks.",
-  },
-  {
-    number: "05",
-    title: "Technical Leadership",
-    description: "Solution design, architectural guidance, and pragmatic decision-making.",
-  },
-  {
-    number: "06",
-    title: "Pragmatic Fullstack",
-    description: "End-to-end delivery utilizing modern AI-assisted tooling when the project requires it.",
-  },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="services" className="border-b border-border">
       <div className="px-6 lg:px-12 py-12">
-        <p className="text-label mb-8">&gt; SERVICES_</p>
+        <p className="text-label mb-8">{t.services.label}</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2">
-        {services.map((service) => (
+        {t.services.items.map((service) => (
           <div
             key={service.number}
             className="border-t border-border md:odd:border-r px-6 lg:px-12 py-8 hover:bg-secondary/30 transition-colors"
