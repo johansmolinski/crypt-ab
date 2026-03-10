@@ -17,7 +17,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
         <img
           src={cryptLogo}
           alt="Crypt AB"
-          className="h-16 md:h-20 w-auto"
+          className="h-20 md:h-28 w-auto"
           style={{
             filter: "invert(75%) sepia(95%) saturate(3000%) hue-rotate(80deg) brightness(105%)",
           }}
