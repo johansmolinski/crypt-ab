@@ -153,5 +153,12 @@ export const translations: Record<Language, TranslationSet> = {
       location: "PLATS: SVERIGE",
       lead: "ANSVARIG: J. SMOLINSKI",
     },
+    footer: {
+      orgNr: "ORG.NR: 556939-5626",
+      vatId: "MOMS.NR: SE556939562601",
+      phone: "TEL: +46 705 955 621",
+      address: "ADRESS:",
+      addressLine: "Kummelvägen 23, 152 57 Södertälje",
+    },
   },
 } as const;
