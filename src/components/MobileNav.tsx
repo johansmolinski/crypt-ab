@@ -21,7 +21,7 @@ const MobileNav = ({ activeSection, onNavigate }: MobileNavProps) => {
           alt="Crypt AB"
           className="h-8 w-auto"
           style={{
-            filter: "invert(55%) sepia(95%) saturate(5000%) hue-rotate(100deg) brightness(110%)",
+            filter: "invert(75%) sepia(95%) saturate(3000%) hue-rotate(80deg) brightness(105%)",
           }}
         />
       </div>

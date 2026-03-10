@@ -17,7 +17,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
           alt="Crypt AB"
           className="h-16 md:h-20 w-auto"
           style={{
-            filter: "invert(55%) sepia(95%) saturate(5000%) hue-rotate(100deg) brightness(110%)",
+            filter: "invert(75%) sepia(95%) saturate(3000%) hue-rotate(80deg) brightness(105%)",
           }}
         />
       </div>

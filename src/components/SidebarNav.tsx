@@ -24,9 +24,9 @@ const SidebarNav = ({ activeSection, onNavigate }: SidebarNavProps) => {
             src={cryptIcon}
             alt="Crypt AB"
             className="h-10 w-auto"
-            style={{
-              filter: "invert(55%) sepia(95%) saturate(5000%) hue-rotate(100deg) brightness(110%)",
-            }}
+          style={{
+            filter: "invert(75%) sepia(95%) saturate(3000%) hue-rotate(80deg) brightness(105%)",
+          }}
           />
         </div>
         <nav className="flex flex-col gap-1">
