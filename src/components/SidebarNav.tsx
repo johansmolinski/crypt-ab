@@ -25,14 +25,14 @@ const SidebarNav = ({ activeSection, onNavigate }: SidebarNavProps) => {
       <div>
         <div className="mb-12 flex items-center justify-between">
           <img
-28:             src={cryptIcon}
-29:             alt="Crypt AB"
-30:             className="h-10 w-auto cursor-pointer"
-31:             onClick={() => onNavigate("home")}
-32:             style={{
-33:               filter: "invert(75%) sepia(95%) saturate(3000%) hue-rotate(80deg) brightness(105%)",
-34:             }}
-35:           />
+            src={cryptIcon}
+            alt="Crypt AB"
+            className="h-10 w-auto cursor-pointer"
+            onClick={() => onNavigate("home")}
+            style={{
+              filter: "invert(75%) sepia(95%) saturate(3000%) hue-rotate(80deg) brightness(105%)",
+            }}
+          />
           <LanguageSelector />
         </div>
         <nav className="flex flex-col gap-1">
