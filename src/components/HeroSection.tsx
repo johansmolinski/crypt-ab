@@ -15,15 +15,17 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
         <img
           src={cryptLogo}
           alt="Crypt AB"
-          className="h-16 md:h-20 w-auto text-foreground"
-          style={{ filter: "invert(1)" }}
+          className="h-16 md:h-20 w-auto"
+          style={{
+            filter: "invert(55%) sepia(95%) saturate(5000%) hue-rotate(100deg) brightness(110%)",
+          }}
         />
       </div>
-      <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-900 text-foreground max-w-3xl leading-[1.05] mb-6">
+      <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-foreground max-w-3xl leading-[1.05] mb-6 crt-glow-lg cursor-blink">
         Reliable architecture for complex systems.
       </h1>
-      <p className="text-muted-foreground max-w-xl mb-10 text-sm leading-relaxed">
-        Crypt AB is a Swedish software consultancy focused on backend development, cloud architecture, APIs, and connected services.
+      <p className="text-muted-foreground max-w-xl mb-10 text-sm leading-relaxed crt-glow">
+        &gt; Crypt AB is a Swedish software consultancy focused on backend development, cloud architecture, APIs, and connected services.
       </p>
       <div>
         <Button

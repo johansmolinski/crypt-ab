@@ -23,8 +23,10 @@ const SidebarNav = ({ activeSection, onNavigate }: SidebarNavProps) => {
           <img
             src={cryptIcon}
             alt="Crypt AB"
-            className="h-10 w-auto text-foreground"
-            style={{ filter: "invert(1)" }}
+            className="h-10 w-auto"
+            style={{
+              filter: "invert(55%) sepia(95%) saturate(5000%) hue-rotate(100deg) brightness(110%)",
+            }}
           />
         </div>
         <nav className="flex flex-col gap-1">
@@ -36,11 +38,11 @@ const SidebarNav = ({ activeSection, onNavigate }: SidebarNavProps) => {
               onMouseLeave={resetStatus}
               className={`text-left font-mono text-sm py-2 transition-colors ${
                 activeSection === item.id
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "text-primary crt-glow"
+                  : "text-muted-foreground hover:text-foreground hover:crt-glow"
               }`}
             >
-              {item.label}
+              &gt; {item.label}
             </button>
           ))}
         </nav>

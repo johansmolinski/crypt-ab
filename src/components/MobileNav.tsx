@@ -19,8 +19,10 @@ const MobileNav = ({ activeSection, onNavigate }: MobileNavProps) => {
         <img
           src={cryptIcon}
           alt="Crypt AB"
-          className="h-8 w-auto text-foreground"
-          style={{ filter: "invert(1)" }}
+          className="h-8 w-auto"
+          style={{
+            filter: "invert(55%) sepia(95%) saturate(5000%) hue-rotate(100deg) brightness(110%)",
+          }}
         />
       </div>
       <nav className="flex border-t border-border">
@@ -30,7 +32,7 @@ const MobileNav = ({ activeSection, onNavigate }: MobileNavProps) => {
             onClick={() => onNavigate(item.id)}
             className={`flex-1 text-center font-mono text-xs py-2 transition-colors border-r last:border-r-0 border-border ${
               activeSection === item.id
-                ? "text-primary"
+                ? "text-primary crt-glow"
                 : "text-muted-foreground"
             }`}
           >
