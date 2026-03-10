@@ -1,4 +1,4 @@
-import { useStatus } from "@/context/StatusContext";
+import cryptIcon from "@/assets/crypt_icon.svg";
 
 interface MobileNavProps {
   activeSection: string;
@@ -16,9 +16,12 @@ const MobileNav = ({ activeSection, onNavigate }: MobileNavProps) => {
   return (
     <header className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-background border-b border-border">
       <div className="flex items-center justify-between px-4 py-3">
-        <span className="font-heading text-base font-800 tracking-tight text-foreground">
-          CRYPT AB
-        </span>
+        <img
+          src={cryptIcon}
+          alt="Crypt AB"
+          className="h-8 w-auto text-foreground"
+          style={{ filter: "invert(1)" }}
+        />
       </div>
       <nav className="flex border-t border-border">
         {navItems.map((item) => (
