@@ -1,3 +1,4 @@
+import cryptIcon from "@/assets/crypt_icon.svg";
 import { useStatus } from "@/context/StatusContext";
 
 interface SidebarNavProps {
@@ -19,9 +20,12 @@ const SidebarNav = ({ activeSection, onNavigate }: SidebarNavProps) => {
     <aside className="hidden lg:flex lg:flex-col lg:justify-between lg:w-[30vw] lg:fixed lg:top-0 lg:left-0 lg:h-screen lg:border-r lg:border-border lg:p-8 lg:pb-10">
       <div>
         <div className="mb-12">
-          <h2 className="font-heading text-xl font-800 tracking-tight text-foreground">
-            CRYPT AB
-          </h2>
+          <img
+            src={cryptIcon}
+            alt="Crypt AB"
+            className="h-10 w-auto text-foreground"
+            style={{ filter: "invert(1)" }}
+          />
         </div>
         <nav className="flex flex-col gap-1">
           {navItems.map((item) => (

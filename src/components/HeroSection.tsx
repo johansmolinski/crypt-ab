@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import cryptLogo from "@/assets/crypt.svg";
 import { useStatus } from "@/context/StatusContext";
 
 interface HeroSectionProps {
@@ -10,6 +11,14 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
 
   return (
     <section id="home" className="min-h-[80vh] flex flex-col justify-center border-b border-border px-6 lg:px-12 py-20">
+      <div className="mb-8">
+        <img
+          src={cryptLogo}
+          alt="Crypt AB"
+          className="h-16 md:h-20 w-auto text-foreground"
+          style={{ filter: "invert(1)" }}
+        />
+      </div>
       <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-900 text-foreground max-w-3xl leading-[1.05] mb-6">
         Reliable architecture for complex systems.
       </h1>
