@@ -7,41 +7,10 @@
    viewBox="0 0 52.017654 52.546402"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
-   sodipodi:docname="crypt_icon.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     inkscape:zoom="1.8651315"
-     inkscape:cx="82.835983"
-     inkscape:cy="94.899476"
-     inkscape:window-width="976"
-     inkscape:window-height="949"
-     inkscape:window-x="2240"
-     inkscape:window-y="30"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
-  <defs
-     id="defs1" />
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-79.110417,-122.2375)">
-    <g
-       id="g18"
-       transform="translate(-13.093059,64.156302)">
+   xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs1" />
+  <g transform="translate(-79.110417,-122.2375)">
+    <g transform="translate(-13.093059,64.156302)">
       <path
           style="fill:currentColor"
           d="m 118.69224,80.64774 c -1.08748,-0.2092 -1.79248,-0.52604 -4.9276,-2.2145 -0.90805,-0.48904 -2.34823,-1.2614 -3.2004,-1.71635 -2.84927,-1.52113 -3.23916,-1.761639 -3.86618,-2.384849 -0.3775,-0.3752 -0.44546,-0.4695 -0.49788,-0.69086 -0.10891,-0.45988 0.0901,-0.95331 0.53949,-1.33741 0.413,-0.35302 1.36475,-0.88492 6.23757,-3.48596 1.03378,-0.55181 2.4859,-1.33186 3.22694,-1.73343 0.74103,-0.40157 1.55256,-0.81506 1.8034,-0.91885 0.44521,-0.18423 0.47177,-0.18876 1.11646,-0.19027 0.77911,-0.002 0.90498,0.0328 1.87236,0.51579 1.22858,0.61335 9.38853,5.00711 10.00151,5.38536 0.82435,0.50867 1.17541,0.95913 1.17925,1.51312 0.003,0.3795 -0.13784,0.63979 -0.56376,1.04467 -0.52521,0.49927 -0.9323,0.745129 -3.42156,2.066509 -0.68453,0.36337 -1.99898,1.06609 -2.92101,1.56159 -3.28346,1.76457 -4.3719,2.2946 -5.10539,2.48613 -0.32741,0.0855 -1.22906,0.14627 -1.4732,0.0993 z"
