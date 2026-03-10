@@ -81,6 +81,13 @@ export const translations: Record<Language, TranslationSet> = {
       location: "LOCATION: SWEDEN",
       lead: "LEAD: J. SMOLINSKI",
     },
+    footer: {
+      orgNr: "ORG NR: 556939-5626",
+      vatId: "VAT ID: SE556939562601",
+      phone: "TEL: +46 705 955 621",
+      address: "ADDR:",
+      addressLine: "Kummelvägen 23, 152 57 Södertälje, Sweden",
+    },
   },
   sv: {
     nav: {
