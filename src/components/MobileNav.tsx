@@ -1,18 +1,17 @@
 import cryptIcon from "@/assets/crypt_icon.svg";
+import { useLanguage } from "@/context/LanguageContext";
+import LanguageSelector from "@/components/LanguageSelector";
 
 interface MobileNavProps {
   activeSection: string;
   onNavigate: (section: string) => void;
 }
 
-const navItems = [
-  { id: "home", label: "Home" },
-  { id: "services", label: "Services" },
-  { id: "about", label: "About" },
-  { id: "contact", label: "Contact" },
-];
+const navKeys = ["home", "services", "about", "contact"] as const;
 
 const MobileNav = ({ activeSection, onNavigate }: MobileNavProps) => {
+  const { t } = useLanguage();
+
   return (
     <header className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-background border-b border-border">
       <div className="flex items-center justify-between px-4 py-3">
@@ -24,19 +23,20 @@ const MobileNav = ({ activeSection, onNavigate }: MobileNavProps) => {
             filter: "invert(75%) sepia(95%) saturate(3000%) hue-rotate(80deg) brightness(105%)",
           }}
         />
+        <LanguageSelector />
       </div>
       <nav className="flex border-t border-border">
-        {navItems.map((item) => (
+        {navKeys.map((id) => (
           <button
-            key={item.id}
-            onClick={() => onNavigate(item.id)}
+            key={id}
+            onClick={() => onNavigate(id)}
             className={`flex-1 text-center font-mono text-xs py-2 transition-colors border-r last:border-r-0 border-border ${
-              activeSection === item.id
+              activeSection === id
                 ? "text-primary crt-glow"
                 : "text-muted-foreground"
             }`}
           >
-            {item.label}
+            {t.nav[id]}
           </button>
         ))}
       </nav>

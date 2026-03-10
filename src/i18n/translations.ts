@@ -1,6 +1,21 @@
 export type Language = "en" | "sv";
 
-export const translations = {
+type TranslationSet = {
+  nav: { home: string; services: string; about: string; contact: string };
+  status: {
+    default: string;
+    navigate: { home: string; services: string; about: string; contact: string };
+    contact: { initiate: string; transmit: string; queued: string; emailInput: string; messageInput: string; mailto: string };
+    lang: { en: string; sv: string };
+  };
+  hero: { headline: string; description: string; cta: string };
+  services: { label: string; items: { number: string; title: string; description: string }[] };
+  about: { label: string; paragraphs: string[] };
+  contact: { label: string; description: string; emailPlaceholder: string; messagePlaceholder: string; submit: string };
+  sidebar: { founded: string; location: string; lead: string };
+};
+
+export const translations: Record<Language, TranslationSet> = {
   en: {
     nav: {
       home: "Home",

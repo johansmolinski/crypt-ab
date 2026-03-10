@@ -7,6 +7,7 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import StatusBar from "@/components/StatusBar";
 import { StatusProvider } from "@/context/StatusContext";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -20,21 +21,23 @@ const Index = () => {
   }, []);
 
   return (
-    <StatusProvider>
-      <div className="min-h-screen pb-6">
-        <SidebarNav activeSection={activeSection} onNavigate={handleNavigate} />
-        <MobileNav activeSection={activeSection} onNavigate={handleNavigate} />
+    <LanguageProvider>
+      <StatusProvider>
+        <div className="min-h-screen pb-6">
+          <SidebarNav activeSection={activeSection} onNavigate={handleNavigate} />
+          <MobileNav activeSection={activeSection} onNavigate={handleNavigate} />
 
-        <main className="lg:ml-[30vw] pt-[88px] lg:pt-0">
-          <HeroSection onContactClick={() => handleNavigate("contact")} />
-          <ServicesSection />
-          <AboutSection />
-          <ContactSection />
-        </main>
+          <main className="lg:ml-[30vw] pt-[88px] lg:pt-0">
+            <HeroSection onContactClick={() => handleNavigate("contact")} />
+            <ServicesSection />
+            <AboutSection />
+            <ContactSection />
+          </main>
 
-        <StatusBar />
-      </div>
-    </StatusProvider>
+          <StatusBar />
+        </div>
+      </StatusProvider>
+    </LanguageProvider>
   );
 };
 

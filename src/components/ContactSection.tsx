@@ -1,46 +1,48 @@
 import { useState, FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { useStatus } from "@/context/StatusContext";
+import { useLanguage } from "@/context/LanguageContext";
 
 const ContactSection = () => {
   const { setStatusText, resetStatus } = useStatus();
+  const { t } = useLanguage();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setStatusText("STATUS: MESSAGE_QUEUED // STANDBY");
+    setStatusText(t.status.contact.queued);
     setTimeout(resetStatus, 3000);
   };
 
   return (
     <section id="contact" className="px-6 lg:px-12 py-16">
-      <p className="text-label mb-8">&gt; CONTACT_</p>
+      <p className="text-label mb-8">{t.contact.label}</p>
       <p className="text-muted-foreground text-sm mb-10 max-w-[58ch]">
-        Discuss consulting opportunities, software projects, or collaborations.
+        {t.contact.description}
       </p>
       <form onSubmit={handleSubmit} className="max-w-lg space-y-8">
         <div>
           <input
             type="email"
-            placeholder="EMAIL_ADDRESS>"
+            placeholder={t.contact.emailPlaceholder}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
             className="w-full bg-transparent border-b border-border pb-3 text-foreground font-mono text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors crt-glow"
-            onFocus={() => setStatusText("INPUT: EMAIL_ADDRESS")}
+            onFocus={() => setStatusText(t.status.contact.emailInput)}
             onBlur={resetStatus}
           />
         </div>
         <div>
           <textarea
-            placeholder="SYSTEM_REQUIREMENTS>"
+            placeholder={t.contact.messagePlaceholder}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
             rows={4}
             className="w-full bg-transparent border-b border-border pb-3 text-foreground font-mono text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none crt-glow"
-            onFocus={() => setStatusText("INPUT: SYSTEM_REQUIREMENTS")}
+            onFocus={() => setStatusText(t.status.contact.messageInput)}
             onBlur={resetStatus}
           />
         </div>
@@ -48,10 +50,10 @@ const ContactSection = () => {
           type="submit"
           variant="brass"
           size="lg"
-          onMouseEnter={() => setStatusText("ACTION: TRANSMIT_MESSAGE")}
+          onMouseEnter={() => setStatusText(t.status.contact.transmit)}
           onMouseLeave={resetStatus}
         >
-          [ TRANSMIT ]
+          {t.contact.submit}
         </Button>
       </form>
 
@@ -60,7 +62,7 @@ const ContactSection = () => {
         <p className="text-label">JOHAN SMOLINSKI</p>
         <p
           className="text-label cursor-pointer hover:text-primary transition-colors"
-          onMouseEnter={() => setStatusText("ACTION: MAILTO // JOHAN@CRYPT.SE")}
+          onMouseEnter={() => setStatusText(t.status.contact.mailto)}
           onMouseLeave={resetStatus}
         >
           JOHAN@CRYPT.SE
