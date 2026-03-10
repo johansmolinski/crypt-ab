@@ -13,6 +13,7 @@ type TranslationSet = {
   about: { label: string; paragraphs: string[] };
   contact: { label: string; description: string; emailPlaceholder: string; messagePlaceholder: string; submit: string };
   sidebar: { founded: string; location: string; lead: string };
+  footer: { orgNr: string; vatId: string; phone: string; address: string; addressLine: string };
 };
 
 export const translations: Record<Language, TranslationSet> = {
