@@ -13,7 +13,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
 
   return (
     <section id="home" className="min-h-[80vh] flex flex-col justify-center border-b border-border px-6 lg:px-12 py-20">
-      <div className="mb-8">
+      <div className="mb-8 flex justify-center">
         <img
           src={cryptLogo}
           alt="Crypt AB"
