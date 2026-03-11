@@ -5,7 +5,7 @@ type TranslationSet = {
   status: {
     default: string;
     navigate: { home: string; services: string; about: string; contact: string };
-    contact: { initiate: string; transmit: string; queued: string; emailInput: string; messageInput: string; mailto: string };
+    contact: { initiate: string; transmit: string; queued: string; nameInput: string; emailInput: string; messageInput: string; mailto: string };
     lang: { en: string; sv: string };
   };
   hero: { headline: string; description: string; cta: string };
