@@ -18,7 +18,7 @@ const Index = () => {
     if (!el) return;
     const main = document.querySelector("main");
     const isDesktop = window.innerWidth >= 1024;
-    const headerOffset = isDesktop ? 0 : 88;
+    const headerOffset = isDesktop ? 16 : 88 + 16;
 
     if (isDesktop && main) {
       const elTop = el.getBoundingClientRect().top + main.scrollTop;
