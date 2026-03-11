@@ -6,6 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 const ContactSection = () => {
   const { setStatusText, resetStatus } = useStatus();
   const { t } = useLanguage();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
