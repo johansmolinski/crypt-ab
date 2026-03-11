@@ -6,6 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 const ContactSection = () => {
   const { setStatusText, resetStatus } = useStatus();
   const { t } = useLanguage();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
@@ -22,6 +23,19 @@ const ContactSection = () => {
         {t.contact.description}
       </p>
       <form onSubmit={handleSubmit} className="max-w-lg space-y-8">
+        <div>
+          <input
+            type="text"
+            placeholder={t.contact.namePlaceholder}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            maxLength={100}
+            className="w-full bg-transparent border-b border-border pb-3 text-foreground font-mono text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors crt-glow"
+            onFocus={() => setStatusText(t.status.contact.nameInput)}
+            onBlur={resetStatus}
+          />
+        </div>
         <div>
           <input
             type="email"

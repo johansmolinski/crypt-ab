@@ -5,13 +5,13 @@ type TranslationSet = {
   status: {
     default: string;
     navigate: { home: string; services: string; about: string; contact: string };
-    contact: { initiate: string; transmit: string; queued: string; emailInput: string; messageInput: string; mailto: string };
+    contact: { initiate: string; transmit: string; queued: string; nameInput: string; emailInput: string; messageInput: string; mailto: string };
     lang: { en: string; sv: string };
   };
   hero: { headline: string; description: string; cta: string };
   services: { label: string; items: { number: string; title: string; description: string }[] };
   about: { label: string; paragraphs: string[] };
-  contact: { label: string; description: string; emailPlaceholder: string; messagePlaceholder: string; submit: string };
+  contact: { label: string; description: string; namePlaceholder: string; emailPlaceholder: string; messagePlaceholder: string; submit: string };
   sidebar: { founded: string; location: string; lead: string };
   footer: { orgNr: string; vatId: string; phone: string; address: string; addressLine: string };
 };
@@ -36,6 +36,7 @@ export const translations: Record<Language, TranslationSet> = {
         initiate: "ACTION: INITIATE_CONTACT // MAILTO: JOHAN@CRYPT.SE",
         transmit: "ACTION: TRANSMIT_MESSAGE",
         queued: "STATUS: MESSAGE_QUEUED // STANDBY",
+        nameInput: "INPUT: CONTACT_NAME",
         emailInput: "INPUT: EMAIL_ADDRESS",
         messageInput: "INPUT: SYSTEM_REQUIREMENTS",
         mailto: "ACTION: MAILTO // JOHAN@CRYPT.SE",
@@ -72,6 +73,7 @@ export const translations: Record<Language, TranslationSet> = {
     contact: {
       label: "> CONTACT_",
       description: "Discuss consulting opportunities, software projects, or collaborations.",
+      namePlaceholder: "CONTACT_NAME>",
       emailPlaceholder: "EMAIL_ADDRESS>",
       messagePlaceholder: "SYSTEM_REQUIREMENTS>",
       submit: "[ TRANSMIT ]",
@@ -108,6 +110,7 @@ export const translations: Record<Language, TranslationSet> = {
         initiate: "ÅTGÄRD: INITIERA_KONTAKT // EPOST: JOHAN@CRYPT.SE",
         transmit: "ÅTGÄRD: SKICKA_MEDDELANDE",
         queued: "STATUS: MEDDELANDE_KÖAT // VÄNTAR",
+        nameInput: "INMATNING: KONTAKTNAMN",
         emailInput: "INMATNING: EPOSTADRESS",
         messageInput: "INMATNING: SYSTEMBEHOV",
         mailto: "ÅTGÄRD: EPOST // JOHAN@CRYPT.SE",
@@ -144,6 +147,7 @@ export const translations: Record<Language, TranslationSet> = {
     contact: {
       label: "> KONTAKT_",
       description: "Diskutera konsultmöjligheter, mjukvaruprojekt eller samarbeten.",
+      namePlaceholder: "KONTAKTNAMN>",
       emailPlaceholder: "EPOSTADRESS>",
       messagePlaceholder: "SYSTEMBEHOV>",
       submit: "[ SKICKA ]",
