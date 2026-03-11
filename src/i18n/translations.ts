@@ -106,13 +106,12 @@ export const translations: Record<Language, TranslationSet> = {
         contact: "ÅTGÄRD: INITIERA_KONTAKT",
       },
       contact: {
-        initiate: "ÅTGÄRD: INITIERA_KONTAKT // EPOST: JOHAN@CRYPT.SE",
+        initiate: "ÅTGÄRD: INITIERA_KONTAKT",
         transmit: "ÅTGÄRD: SKICKA_MEDDELANDE",
         queued: "STATUS: MEDDELANDE_KÖAT // VÄNTAR",
         nameInput: "INMATNING: KONTAKTNAMN",
         emailInput: "INMATNING: EPOSTADRESS",
         messageInput: "INMATNING: SYSTEMBEHOV",
-        mailto: "ÅTGÄRD: EPOST // JOHAN@CRYPT.SE",
       },
       lang: {
         en: "SPRÅK: ENGLISH",
