@@ -13,20 +13,36 @@ import { LanguageProvider } from "@/context/LanguageContext";
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
 
+  const scrollToElement = useCallback((elementId: string) => {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    const main = document.querySelector("main");
+    const isDesktop = window.innerWidth >= 1024;
+    const headerOffset = isDesktop ? 0 : 88;
+
+    if (isDesktop && main) {
+      const elTop = el.getBoundingClientRect().top + main.scrollTop;
+      main.scrollTo({ top: elTop - headerOffset, behavior: "instant" as ScrollBehavior });
+    } else {
+      const elTop = el.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: elTop - headerOffset, behavior: "instant" as ScrollBehavior });
+    }
+  }, []);
+
   const handleNavigate = useCallback((section: string) => {
-    setActiveSection(section);
-    if (section === "home") {
-      // Scroll both main (desktop) and window (mobile) to absolute top
+    if (section === "logo") {
+      setActiveSection("home");
       const main = document.querySelector("main");
       if (main) main.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
       window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+    } else if (section === "home") {
+      setActiveSection("home");
+      scrollToElement("hero-headline");
     } else {
-      const el = document.getElementById(section);
-      if (el) {
-        el.scrollIntoView({ behavior: "auto" });
-      }
+      setActiveSection(section);
+      scrollToElement(section);
     }
-  }, []);
+  }, [scrollToElement]);
 
   return (
     <LanguageProvider>
