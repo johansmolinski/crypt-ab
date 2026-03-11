@@ -147,6 +147,7 @@ export const translations: Record<Language, TranslationSet> = {
     contact: {
       label: "> KONTAKT_",
       description: "Diskutera konsultmöjligheter, mjukvaruprojekt eller samarbeten.",
+      namePlaceholder: "KONTAKTNAMN>",
       emailPlaceholder: "EPOSTADRESS>",
       messagePlaceholder: "SYSTEMBEHOV>",
       submit: "[ SKICKA ]",
