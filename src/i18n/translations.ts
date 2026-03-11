@@ -73,6 +73,7 @@ export const translations: Record<Language, TranslationSet> = {
     contact: {
       label: "> CONTACT_",
       description: "Discuss consulting opportunities, software projects, or collaborations.",
+      namePlaceholder: "CONTACT_NAME>",
       emailPlaceholder: "EMAIL_ADDRESS>",
       messagePlaceholder: "SYSTEM_REQUIREMENTS>",
       submit: "[ TRANSMIT ]",
