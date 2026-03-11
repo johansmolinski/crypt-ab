@@ -11,7 +11,7 @@ type TranslationSet = {
   hero: { headline: string; description: string; cta: string };
   services: { label: string; items: { number: string; title: string; description: string }[] };
   about: { label: string; paragraphs: string[] };
-  contact: { label: string; description: string; emailPlaceholder: string; messagePlaceholder: string; submit: string };
+  contact: { label: string; description: string; namePlaceholder: string; emailPlaceholder: string; messagePlaceholder: string; submit: string };
   sidebar: { founded: string; location: string; lead: string };
   footer: { orgNr: string; vatId: string; phone: string; address: string; addressLine: string };
 };
