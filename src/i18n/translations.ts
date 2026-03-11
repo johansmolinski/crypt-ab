@@ -36,6 +36,7 @@ export const translations: Record<Language, TranslationSet> = {
         initiate: "ACTION: INITIATE_CONTACT // MAILTO: JOHAN@CRYPT.SE",
         transmit: "ACTION: TRANSMIT_MESSAGE",
         queued: "STATUS: MESSAGE_QUEUED // STANDBY",
+        nameInput: "INPUT: CONTACT_NAME",
         emailInput: "INPUT: EMAIL_ADDRESS",
         messageInput: "INPUT: SYSTEM_REQUIREMENTS",
         mailto: "ACTION: MAILTO // JOHAN@CRYPT.SE",
