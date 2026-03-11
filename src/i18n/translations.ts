@@ -5,7 +5,7 @@ type TranslationSet = {
   status: {
     default: string;
     navigate: { home: string; services: string; about: string; contact: string };
-    contact: { initiate: string; transmit: string; queued: string; nameInput: string; emailInput: string; messageInput: string; mailto: string };
+    contact: { initiate: string; transmit: string; queued: string; nameInput: string; emailInput: string; messageInput: string };
     lang: { en: string; sv: string };
   };
   hero: { headline: string; description: string; cta: string };
@@ -33,13 +33,12 @@ export const translations: Record<Language, TranslationSet> = {
         contact: "ACTION: INITIATE_CONTACT",
       },
       contact: {
-        initiate: "ACTION: INITIATE_CONTACT // MAILTO: JOHAN@CRYPT.SE",
+        initiate: "ACTION: INITIATE_CONTACT",
         transmit: "ACTION: TRANSMIT_MESSAGE",
         queued: "STATUS: MESSAGE_QUEUED // STANDBY",
         nameInput: "INPUT: CONTACT_NAME",
         emailInput: "INPUT: EMAIL_ADDRESS",
         messageInput: "INPUT: SYSTEM_REQUIREMENTS",
-        mailto: "ACTION: MAILTO // JOHAN@CRYPT.SE",
       },
       lang: {
         en: "LOCALE: ENGLISH",
@@ -107,13 +106,12 @@ export const translations: Record<Language, TranslationSet> = {
         contact: "ÅTGÄRD: INITIERA_KONTAKT",
       },
       contact: {
-        initiate: "ÅTGÄRD: INITIERA_KONTAKT // EPOST: JOHAN@CRYPT.SE",
+        initiate: "ÅTGÄRD: INITIERA_KONTAKT",
         transmit: "ÅTGÄRD: SKICKA_MEDDELANDE",
         queued: "STATUS: MEDDELANDE_KÖAT // VÄNTAR",
         nameInput: "INMATNING: KONTAKTNAMN",
         emailInput: "INMATNING: EPOSTADRESS",
         messageInput: "INMATNING: SYSTEMBEHOV",
-        mailto: "ÅTGÄRD: EPOST // JOHAN@CRYPT.SE",
       },
       lang: {
         en: "SPRÅK: ENGLISH",

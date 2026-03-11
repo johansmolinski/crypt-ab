@@ -74,13 +74,6 @@ const ContactSection = () => {
       <div className="mt-16 space-y-1">
         <p className="text-label">CRYPT AB</p>
         <p className="text-label">JOHAN SMOLINSKI</p>
-        <p
-          className="text-label cursor-pointer hover:text-primary transition-colors"
-          onMouseEnter={() => setStatusText(t.status.contact.mailto)}
-          onMouseLeave={resetStatus}
-        >
-          JOHAN@CRYPT.SE
-        </p>
       </div>
     </section>
   );
