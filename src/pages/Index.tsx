@@ -15,9 +15,16 @@ const Index = () => {
 
   const handleNavigate = useCallback((section: string) => {
     setActiveSection(section);
-    const el = document.getElementById(section);
-    if (el) {
-      el.scrollIntoView({ behavior: "auto" });
+    if (section === "home") {
+      // Scroll both main (desktop) and window (mobile) to absolute top
+      const main = document.querySelector("main");
+      if (main) main.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+      window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+    } else {
+      const el = document.getElementById(section);
+      if (el) {
+        el.scrollIntoView({ behavior: "auto" });
+      }
     }
   }, []);
 
