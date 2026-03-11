@@ -31,7 +31,12 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
     };
   }, []);
 
-  const logoHeight = `clamp(5rem, ${100 - scrollProgress * 70}vh, 100vh)`;
+  // Calculate visible viewport height accounting for mobile header on non-desktop
+  const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 1024;
+  const headerOffset = isDesktop ? 0 : 88; // Mobile header height
+  const maxHeight = `calc(100vh - ${headerOffset}px)`;
+  
+  const logoHeight = `clamp(5rem, ${100 - scrollProgress * 70}vh, ${maxHeight})`;
   const contentOpacity = scrollProgress > 0.3 ? (scrollProgress - 0.3) / 0.7 : 0;
 
   return (
