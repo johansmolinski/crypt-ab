@@ -27,7 +27,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
 
       {/* Content below the logo */}
       <div className="py-12">
-        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-foreground max-w-3xl leading-[1.05] mb-6 crt-glow-lg cursor-blink">
+        <h1 id="hero-headline" className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-foreground max-w-3xl leading-[1.05] mb-6 crt-glow-lg cursor-blink">
           {t.hero.headline}
         </h1>
         <p className="text-muted-foreground max-w-xl mb-10 text-sm leading-relaxed crt-glow">
