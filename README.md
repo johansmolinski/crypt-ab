@@ -90,7 +90,7 @@ Configure GitHub Pages like this:
 
 Configure DNS like this:
 
-1. Create a `CNAME` record for `www` that points to `johan.github.io`.
+1. Create a `CNAME` record for `www` that points to `johansmolinski.github.io`.
 2. Create `A` records for the apex domain `crypt.se` that point to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`.
 3. If your DNS provider supports IPv6, also create `AAAA` records for `crypt.se` that point to `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, and `2606:50c0:8003::153`.
 
