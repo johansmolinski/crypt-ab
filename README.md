@@ -62,12 +62,36 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+This repository is configured for GitHub Pages using GitHub Actions.
 
-## Can I connect a custom domain to my Lovable project?
+1. Push the repository to GitHub.
+2. Open **Settings -> Pages** and set the source to **GitHub Actions**.
+3. Push to `main` and let [.github/workflows/deploy.yml](.github/workflows/deploy.yml) publish the `dist/` folder.
+4. Your site will be available at `https://<owner>.github.io/<repo>/` for a project site, or `https://<owner>.github.io/` if the repository itself is `<owner>.github.io`.
 
-Yes, you can!
+For a local Pages-style build, run:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+bun install --frozen-lockfile
+GITHUB_ACTIONS=true GITHUB_REPOSITORY=<owner>/<repo> bun run build:pages
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The build also writes `dist/404.html` so client-side routes can still boot on GitHub Pages.
+
+## How do I configure the custom domain?
+
+This repository is set up to use `www.crypt.se` as the canonical GitHub Pages domain. The checked-in [public/CNAME](public/CNAME) file makes GitHub Pages publish the site on that hostname.
+
+Configure GitHub Pages like this:
+
+1. Open **Settings -> Pages** in the GitHub repository.
+2. Set the custom domain to `www.crypt.se`.
+3. Wait for GitHub to verify DNS, then enable **Enforce HTTPS**.
+
+Configure DNS like this:
+
+1. Create a `CNAME` record for `www` that points to `johan.github.io`.
+2. Create `A` records for the apex domain `crypt.se` that point to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`.
+3. If your DNS provider supports IPv6, also create `AAAA` records for `crypt.se` that point to `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, and `2606:50c0:8003::153`.
+
+Once both hosts resolve to GitHub Pages and `www.crypt.se` is the configured custom domain, GitHub Pages will redirect `https://crypt.se` to `https://www.crypt.se`.
