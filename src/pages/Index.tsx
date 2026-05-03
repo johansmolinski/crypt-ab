@@ -4,6 +4,7 @@ import MobileNav from "@/components/MobileNav";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
+import PoliciesSection from "@/components/PoliciesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import StatusBar from "@/components/StatusBar";
@@ -55,6 +56,7 @@ const Index = () => {
             <HeroSection onContactClick={() => handleNavigate("contact")} />
             <ServicesSection />
             <AboutSection />
+            <PoliciesSection />
             <ContactSection />
             <Footer />
           </main>
